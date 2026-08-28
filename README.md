@@ -20,3 +20,15 @@ Everything else is a plain HTML tag.
 
 - **Ex 4** collapses with a hidden checkbox + label in CSS. No jQuery, no `data-toggle`, no Bootstrap JS.
 - **Ex 5** uses `IntersectionObserver` instead of `data-spy="scroll"`.
+
+## Public CDN link
+
+`bootstrap.min.css` is served free from jsDelivr once this repo is public:
+
+```html
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/honey-aaqil/fullstack-lab@main/bootstrap.min.css>
+<script defer src=https://cdn.jsdelivr.net/gh/honey-aaqil/fullstack-lab@main/spy.js></script>
+```
+
+Use that instead of the local filename and an `ex*.html` file works on its own,
+anywhere, with nothing next to it.
