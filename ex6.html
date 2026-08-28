@@ -1,0 +1,19 @@
+<link rel=stylesheet href=bootstrap.min.css>
+<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js></script>
+<title>Ex 6 - AngularJS Add</title>
+
+<div ng-app=myApp ng-controller=listCtrl>
+  <h2>Dynamic List with Add</h2>
+  <input ng-model=item placeholder="Enter item">
+  <button ng-click=add()>Add</button>
+  <ul><li ng-repeat="x in list track by $index">{{x}}</ul>
+</div>
+
+<script>
+angular.module("myApp", []).controller("listCtrl", function ($scope) {
+  $scope.list = [];
+  $scope.add = function () {
+    if ($scope.item) { $scope.list.push($scope.item); $scope.item = "" }
+  };
+});
+</script>

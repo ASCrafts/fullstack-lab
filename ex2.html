@@ -1,0 +1,19 @@
+<link rel=stylesheet href=bootstrap.min.css>
+<title>Ex 2 - Sign-up Validation</title>
+
+<h2>Sign-Up Form</h2>
+
+<form name=f onsubmit="return check()">
+  <input name=name placeholder=Name required>
+  <input type=number name=phone placeholder="Phone number" required>
+  <input type=password name=pass placeholder="Password (8+)" minlength=8 required>
+  <button>Sign Up</button>
+</form>
+
+<script>
+function check() {
+  if (isNaN(document.f.phone.value)) { alert("Phone must contain only digits."); return false }
+  if (document.f.pass.value.length < 8) { alert("Password must be 8+ characters."); return false }
+  return true
+}
+</script>
